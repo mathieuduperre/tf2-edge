@@ -20,7 +20,7 @@ chmod +x tf2_entrypoint.sh
 
 docker build -t grido/tf2-edge .
 
-docker run -p 27015:27015 -p 27015:27015/udp -e STEAM_ACCOUNT_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXX grido/tf2-edge
+docker run -p 27015:27015 -p 27015:27015/udp grido/tf2-edge
 
 make sure your steam account token, aka GSLT, is using the code 232250.
 

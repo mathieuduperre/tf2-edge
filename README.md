@@ -32,11 +32,13 @@ How the docker was built. You should not need that, these are just notes.
 docker pull ubuntu
 
 docker run --name tf2-edge -it ubuntu:latest bash
+
 dpkg --add-architecture i386
 
 apt-get update
 
 apt-get install -y lib32gcc1 libc6-i386 wget lib32stdc++6 lib32tinfo5
+
 apt-get install  libtinfo5:i386  libncurses5:i386 libcurl3-gnutls:i386
 
 cd root

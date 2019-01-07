@@ -28,9 +28,11 @@ EXPOSE 27015/udp
 EXPOSE 27015
 
 USER root
-RUN chmod 775 /root/.steam/sdk32/steamclient.so
-RUN CHOWN steam:steam /root/.steam/sdk32/steamclient.so
-RUN ln -s /root/tf2/bin/steamclient.so /root/.steam/sdk32/steamclient.so
+RUN mkdir /home/steam/.steam
+RUN ln -s /home/steam/linux32 /home/steam/.steam/sdk32
+RUN chmod 775 /home/steam/.steam/sdk32/steamclient.so
+RUN chown steam:steam /home/steam/.steam/sdk32/steamclient.so
+RUN ln -s /home/steam/tf2/bin/steamclient.so /home/steam/.steam/sdk32/steamclient.so
 USER steam
 ADD ./tf2_entrypoint.sh tf2_entrypoint.sh
 

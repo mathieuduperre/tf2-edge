@@ -52,6 +52,7 @@ tar -xvzf steamcmd_linux.tar.gz
 cd tf2
 
 mkdir /root/.steam/sdk32
+
 ln -s /root/tf2/bin/steamclient.so /root/.steam/sdk32/steamclient.so
 
  ./srcds_run -game tf -console +sv_pure 1 +randommap +maxplayers 24

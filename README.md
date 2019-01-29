@@ -22,6 +22,11 @@ cd tf2-edge
 
 docker build -t grido/tf2-edge .
 
+(if succesful)
+docker login (with your cred)
+docker tag grido/tf2-edge grido/tf2-edge:latest
+docker push grido/tf2-edge:latest
+
 docker run -p 27015:27015 -p 27015:27015/udp grido/tf2-edge
 
 

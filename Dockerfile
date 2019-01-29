@@ -35,5 +35,5 @@ RUN chown steam:steam /home/steam/.steam/sdk32/steamclient.so
 RUN ln -s /home/steam/tf2/bin/steamclient.so /home/steam/.steam/sdk32/steamclient.so
 USER steam
 ADD ./tf2_entrypoint.sh tf2_entrypoint.sh
-
+RUN ["chmod", "+x", "./csgo_entrypoint.sh"]
 CMD ./tf2_entrypoint.sh

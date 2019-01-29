@@ -1,33 +1,36 @@
+# Team fortress 2 docker image
 
-Quick start:
+-------------------------------------------------------------------------------------------------------------------
+## Quick start:
 
-You can easily start one instance by simply doing:
+To run a game, just execute, You can easily start one instance by simply doing:
 
 docker pull grido/tf2-edge
 
-docker run -p 27015:27015 -p 27015:27015/udp -e STEAM_ACCOUNT_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXX grido/tf2-edge
+docker run -p 27015:27015 -p 27015:27015/udp grido/tf2-edge
 
-make sure your steam account token, aka GSLT, is using the code 232250.
-----------------------------------------------------------------------------------------------------------------------------------
 
+-------------------------------------------------------------------------------------------------------------------
+## How to build docker image
+
+useful if you need to update
 To build the docker image locally by using this git repo:
 
 git clone https://github.com/mathieuduperre/tf2-edge.git
 
 cd tf2-edge
 
-chmod +x tf2_entrypoint.sh
-
 docker build -t grido/tf2-edge .
 
 docker run -p 27015:27015 -p 27015:27015/udp grido/tf2-edge
 
-make sure your steam account token, aka GSLT, is using the code 232250.
+
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-How the docker was built. You should not need that, these are just notes.
+## How the docker was built. 
 
+You should not need that, these are just notes.
 
 docker pull ubuntu
 
